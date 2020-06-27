@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { getZoneInformation } from './helpers'
+import { whereIsIt4pm } from './helpers'
 
 
 function Countdown() {
   const calculateZone = () => {
-    const {countdowm, location} = getZoneInformation();
+    const {city, country, drink, countdowm} = whereIsIt4pm();
     return {
-      'time': {
+      drink,
+      country,
+      city,
+      timeLeft: {
         minutes: countdowm.minutes,
         seconds: countdowm.seconds
       },
-      'location': location
+      
     };
   };
 
@@ -23,14 +26,11 @@ function Countdown() {
   });
 
   const timerComponents = [];
-
-  const timeLeft = zoneData.time;
-  const zone = zoneData.location;
+  const {timeLeft, city, country, drink} = zoneData;
 
   Object.keys(timeLeft).forEach(interval => {
-    if (!timeLeft[interval]) {
-      return;
-    }
+
+    if (!timeLeft[interval]) return;
 
     timerComponents.push(
       <span key={interval}>
@@ -41,11 +41,11 @@ function Countdown() {
 
   return (
     <center>
-        <div>{timerComponents} until 5 pm</div>
-        <div> in {zone['city']}, {zone['country']} and </div>
-        <div>The drink of choice is {zone['drink']}!</div>
+      <div>{timerComponents} until 5 pm in {city}, {country}</div>
+      <div>The drink of choice is {drink}.</div>
     </center>
   );
+
 }
 
 export default Countdown;

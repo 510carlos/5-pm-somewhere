@@ -1,21 +1,30 @@
-import timezone from './timezones'
-import moment from 'moment';
+import spacetime from 'spacetime';
+import { supportedCities } from './supportedCities';
 
-export function getZoneInformation() {
-    for ( var i = -12; i < 12; i++) {
+export function whereIsIt4pm() {
 
-        const m1 = moment().utcOffset(i);
-        const hour = parseInt(m1.hour());
-        const seconds = parseInt(m1.seconds());
-        
-        if(hour === 4) {
-            return {
-                'location': timezone[i],
-                'countdowm': {
-                    'minutes': hour === 0 ? '0' : 60 - m1.minutes(),
-                    'seconds': seconds === 0 ? '0' : 60 - m1.seconds(),
-                }
-            }
-        }    
+    const s = spacetime();
+    const names = spacetime.whereIts("4pm");
+
+    const listOfCities = supportedCities.map(city => city.name);
+    const cityname = listOfCities.filter(value => names.includes(value))[0];
+    const zone = s.goto(cityname);
+    
+    const zoneInformation = supportedCities.filter(value => value.name === cityname)[0];
+    const {city, country, drink} = zoneInformation;
+
+    const seconds = zone.seconds();
+    const minutes = zone.minutes();
+
+    return {
+        city,
+        country,
+        drink,
+        time: zone.time(),
+        offset: zone.timezone().current.offset,
+        countdowm: {
+            'minutes': minutes === 0 ? '0' : 60 - minutes,
+            'seconds': seconds === 0 ? '0' : 60 - seconds,
+        }
     }
 }

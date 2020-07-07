@@ -6,18 +6,14 @@ import GoogleFontLoader from 'react-google-font-loader';
 const Div = styled.div`
   margin: auto;
   text-align: center;
-
-  div span {
-    font-size: 36px;
-    text-shadow: black 1px 1px 1px;
-    color:white;
-  }
+  text-shadow: 0 1px #fff;
 
   span {
     font-size: 66px;
     font-family: Orbitron;
     color: red;
     font-weight:bold;
+    text-shadow: 0 1px #000;
   }
 
 `;
@@ -58,7 +54,7 @@ function Countdown() {
         ]}
         subsets={['cyrillic-ext', 'greek']}
       />
-      <h1>It's always happy our somewhere</h1>
+      <h1>It's always happy hour somewhere!</h1>
       <div>Count down until 5 pm</div>
       <span>{timeLeft.minutes} : {timeLeft.seconds}</span>
       <p>{drink} is the drink of choice in <br />{city}, {country}</p>

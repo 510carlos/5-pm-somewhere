@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { whereIsIt4pm } from './helpers'
 import styled from 'styled-components';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const Div = styled.div`
   margin: auto;
-  width: 500px;
   text-align: center;
-  padding-top:360px;
 
   div span {
     font-size: 36px;
     text-shadow: black 1px 1px 1px;
     color:white;
+  }
+
+  span {
+    font-size: 66px;
+    font-family: Orbitron;
+    color: red;
+    font-weight:bold;
   }
 
 `;
@@ -39,25 +45,23 @@ function Countdown() {
     }, 100);
   });
 
-  const timerComponents = [];
   const {timeLeft, city, country, drink} = zoneData;
-
-  Object.keys(timeLeft).forEach(interval => {
-
-    if (!timeLeft[interval]) return;
-
-    timerComponents.push(
-      <span key={interval}>
-        {timeLeft[interval]} {interval}{" "}
-      </span>
-    );
-  });
 
   return (
     <Div>
-      <div>{timerComponents}</div>
-      <div> until 5 pm in {city}, {country}</div>
-      <div>The drink of choice is {drink}.</div>
+      <GoogleFontLoader
+        fonts={[
+          {
+            font: 'Orbitron',
+            weights: [400, '400i'],
+          }
+        ]}
+        subsets={['cyrillic-ext', 'greek']}
+      />
+      <h1>It's always happy our somewhere</h1>
+      <div>Count down until 5 pm</div>
+      <span>{timeLeft.minutes} : {timeLeft.seconds}</span>
+      <p>{drink} is the drink of choice in <br />{city}, {country}</p>
     </Div>
   );
 

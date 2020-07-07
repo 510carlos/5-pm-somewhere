@@ -154,6 +154,13 @@ export var supportedCities = [
     },
     {
         timezone: -2,
+        name: "atlantic/south_georgia",
+        city: "South Georgia",
+        country: "atlantic",
+        drink: "n/a"
+    },
+    {
+        timezone: -2,
         name: "america/st_johns",
         city: "St Johns",
         country: "United States of America",

@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { whereIsIt4pm } from './helpers'
+import styled from 'styled-components';
 
+const Div = styled.div`
+  margin: auto;
+  width: 500px;
+  text-align: center;
+  padding-top:360px;
+
+  div span {
+    font-size: 36px;
+    text-shadow: black 1px 1px 1px;
+    color:white;
+  }
+
+`;
 
 function Countdown() {
   const calculateZone = () => {
@@ -22,7 +36,7 @@ function Countdown() {
   useEffect(() => {
     setTimeout(() => {
       setZone(calculateZone());
-    }, 1000);
+    }, 100);
   });
 
   const timerComponents = [];
@@ -40,10 +54,11 @@ function Countdown() {
   });
 
   return (
-    <center>
-      <div>{timerComponents} until 5 pm in {city}, {country}</div>
+    <Div>
+      <div>{timerComponents}</div>
+      <div> until 5 pm in {city}, {country}</div>
       <div>The drink of choice is {drink}.</div>
-    </center>
+    </Div>
   );
 
 }

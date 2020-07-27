@@ -20,9 +20,10 @@ const Div = styled.div`
 
 function Countdown() {
   const calculateZone = () => {
-    const {city, country, drink, countdowm} = whereIsIt4pm();
+    const {city, country, drink, countdowm, note} = whereIsIt4pm();
     return {
       drink,
+      note,
       country,
       city,
       timeLeft: {
@@ -41,7 +42,7 @@ function Countdown() {
     }, 100);
   });
 
-  const {timeLeft, city, country, drink} = zoneData;
+  const {timeLeft, city, country, drink, note} = zoneData;
 
   return (
     <Div>
@@ -58,6 +59,7 @@ function Countdown() {
       <div>Count down until 5 pm</div>
       <span>{timeLeft.minutes} : {timeLeft.seconds}</span>
       <p>{drink} is the drink of choice in <br />{city}, {country}</p>
+      <p>{note}</p>
     </Div>
   );
 

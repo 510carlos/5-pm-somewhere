@@ -28,7 +28,7 @@ function Header () {
           Home
         </Menu.Item>
         <Menu.Item onClick={blog} key="app">
-          Blog
+          Lifestyle
         </Menu.Item>
       </Menu>
     </StyledDiv>

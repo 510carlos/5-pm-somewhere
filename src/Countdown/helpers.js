@@ -14,20 +14,28 @@ export function whereIsIt4pm() {
     const zoneInformation = supportedCities.filter(value => value.name === cityname)[0];
     
 
-    var {city, country, drink} = zoneInformation;
+    var {city, country, drink, note} = zoneInformation;
+    
+    var minutes = zone.minute();
+    minutes = minutes === 0 ? '59' : 59 - minutes
 
-    const seconds = zone.second();
-    const minutes = zone.minute();
+    var seconds = zone.second();
+    seconds = seconds === 0 ? '59' : 60 - seconds;
+    // add padding to seconds
+    seconds = seconds.toString()
+    if(seconds.length == 1) 
+        seconds = seconds.padStart(2,'0');
 
     return {
         city,
         country,
         drink,
+        note,
         time: zone.time(),
         offset: zone.timezone().current.offset,
         countdowm: {
-            'minutes': minutes === 0 ? '59' : 59 - minutes,
-            'seconds': seconds === 0 ? '59' : 60 - seconds,
+            'minutes': minutes,
+            'seconds': seconds,
         }
     }
 }

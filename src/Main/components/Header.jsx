@@ -39,16 +39,10 @@ function Header () {
                 <div class="menu">
                         <ul>
                             <li class="current_page_item">
-                                <a href="http://blog.theweekendisneverover.com/">Home</a>
+                                <a href="http://theweekendisneverover.com/">Home</a>
                             </li>
                             <li class="page_item page-item-275">
-                                <a href="http://blog.theweekendisneverover.com/about-us-option-2-comment-please/">About Us</a>
-                            </li>
-                            <li class="page_item page-item-59">
-                                <a href="http://blog.theweekendisneverover.com/contact-us/">Contact Us</a>
-                                </li>
-                            <li class="page_item page-item-3">
-                                <a href="http://blog.theweekendisneverover.com/privacy-policy/">Privacy Policy</a>
+                                <a href="http://blog.theweekendisneverover.com/">Lifestyle Blog</a>
                             </li>
                         </ul>
                     </div>

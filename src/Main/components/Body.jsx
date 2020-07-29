@@ -12,15 +12,13 @@ var StyledDiv = styled.div`
     border: solid 1px #fff;
     margin-right: 1%;
     margin-left: 1%;
+    display: grid;
+    place-items: center;
 `;
 
 const Body = (props) => (
     <StyledDiv>
-        <Layout>
-            <Content style={{ margin: '0 16px' }}>
-                {props.children}
-            </Content>
-        </Layout>
+        {props.children}
     </StyledDiv>
 );
   

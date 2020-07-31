@@ -4,12 +4,25 @@ import { supportedCities } from './supportedCities';
 export function whereIsIt4pm() {
 
     const s = spacetime();
-    const names = spacetime.whereIts("5:00pm");
+    const names = spacetime.whereIts("6:00pm");
+
+    // for (const property in names) {
+    //     console.log("----");
+    //     console.log(`${property}: ${names[property]}`);
+    //     const zone = s.goto(names[property]);
+    //     console.log(zone.time())
+    //     console.log(zone.hour(), zone.minute())
+    //     console.log(zone.hasDST(), zone.isDST())
+
+    // }
+    // debugger;
 
     const listOfCities = supportedCities.map(city => city.name);
 
     const cityname = listOfCities.filter(value => names.includes(value))[0];
     const zone = s.goto(cityname);
+
+    // console.log(zone.time(), cityname);
     
     const zoneInformation = supportedCities.filter(value => value.name === cityname)[0];
     

@@ -42,7 +42,10 @@ function Header () {
                                 <a href="http://theweekendisneverover.com/">Home</a>
                             </li>
                             <li class="page_item page-item-275">
-                                <a href="http://blog.theweekendisneverover.com/">Lifestyle Blog</a>
+                                <a href="http://blog.theweekendisneverover.com/">Lifestyle</a>
+                            </li>
+                            <li class="page_item page-item-275">
+                                <a href="https://www.etsy.com/shop/WeekendIsNeverOver">Shop</a>
                             </li>
                         </ul>
                     </div>

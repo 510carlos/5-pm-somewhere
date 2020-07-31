@@ -247,3 +247,80 @@
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
+
+
+    .site-info-wrapper {
+        background-color: black;
+        margin-top: 33px;
+    padding: 1.5em 0; }
+    .site-info-wrapper .site-info {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto; }
+        .site-info-wrapper .site-info:after {
+        content: " ";
+        display: block;
+        clear: both; }
+        @media only screen and (max-width: 40.063em) {
+        .site-info-wrapper .site-info {
+            text-align: center; } }
+    .site-info-wrapper .site-info-text {
+        color: white;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 90%;
+        line-height: 38px; }
+    .site-info-wrapper .footer-menu {
+        width: 63.88889%;
+        float: left;
+        margin-left: 1.38889%;
+        margin-right: 1.38889%; }
+    .site-info-wrapper .social-menu {
+        width: 30.55556%;
+        float: right;
+        margin-left: 1.38889%;
+        margin-right: 1.38889%; }
+        @media only screen and (min-width: 40.063em) {
+        .site-info-wrapper .social-menu {
+            text-align: right; } }
+    @media only screen and (max-width: 40.063em) {
+        .site-info-wrapper .footer-nav,
+        .site-info-wrapper .site-info-text,
+        .site-info-wrapper .social-menu {
+        width: 97.22222%;
+        float: left;
+        margin-left: 1.38889%;
+        margin-right: 1.38889%;
+        text-align: center; } }
+
+
+        .footer-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; }
+            @media only screen and (min-width: 40.063em) {
+              .footer-menu ul {
+                text-align: left; } }
+            .footer-menu ul li {
+              display: inline-block;
+              font-family: "Roboto", "Helvetica Neue", sans-serif;
+              font-size: .875rem;
+              font-weight: 600;
+              margin: 0 10px;
+              text-align: center;
+              text-transform: uppercase; }
+              .footer-menu ul li:first-of-type {
+                margin-left: 0; }
+              @media only screen and (min-width: 568px) {
+                .footer-menu ul li {
+                  text-align: left; } }
+              .footer-menu ul li a {
+                color: #fff;
+                border-bottom: 1px solid transparent;
+                padding-bottom: 5px; }
+                .footer-menu ul li a:hover {
+                  border-color: #fff; }
+                  .footer-menu ul li a:hover:after {
+                    padding-left: 10px; }

@@ -4,7 +4,7 @@ import { Body, Header} from './components'
 import './Main.css';
 import logo from './components/logo-twino.png';
 import styled from 'styled-components';
-import ScriptTag from 'react-script-tag';
+import Footer from './components/Footer'
 
 var StyledDiv = styled.div`
     display: grid;
@@ -27,8 +27,7 @@ var Main = () => {
             <Body>
               <Countdown />
             </Body>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <ScriptTag type="text/javascript" src="../nav.js" />
+			<Footer />
         </StyledDiv>
     )
 };

@@ -31,7 +31,7 @@ function Header () {
                 <div></div>
             </div>
             <div class="site-title-wrapper">
-                <h1 class="site-title"><a href="http://blog.theweekendisneverover.com/" rel="home">the WEEKEND is never over</a></h1>
+                <h1 class="site-title"><a href="http://lifestyle.theweekendisneverover.com/" rel="home">the WEEKEND is never over</a></h1>
                 <div class="site-description">It's a Lifestyle!</div>
             </div>
             <div class="main-navigation-container">
@@ -45,7 +45,7 @@ function Header () {
                                 <a href="http://blog.theweekendisneverover.com/">Lifestyle</a>
                             </li>
                             <li class="page_item page-item-275">
-                                <a href="https://www.etsy.com/shop/WeekendIsNeverOver">Shop</a>
+                                <a target="_blank" href="https://www.etsy.com/shop/WeekendIsNeverOver">Shop</a>
                             </li>
                         </ul>
                     </div>

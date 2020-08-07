@@ -30,7 +30,6 @@ function Countdown() {
         minutes: countdowm.minutes,
         seconds: countdowm.seconds
       },
-      
     };
   };
 
@@ -42,7 +41,7 @@ function Countdown() {
     }, 100);
   });
 
-  const {timeLeft, city, country, drink, note} = zoneData;
+  const { timeLeft, city, country, drink, note } = zoneData;
 
   return (
     <Div>

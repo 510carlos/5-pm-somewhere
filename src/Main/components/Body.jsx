@@ -1,9 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { Layout } from 'antd';
-
-const { Content } = Layout;
-
 
 var StyledDiv = styled.div`
     background-color: #eee;

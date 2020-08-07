@@ -1,4 +1,6 @@
-@import '~antd/dist/antd.css';
+body a {
+  text-decoration: none;
+}
 
 .site-title-wrapper {
     padding: 20px 0 0 20px;
@@ -30,7 +32,9 @@
         font-size: 2rem;
         padding: 35px 0; } }
     .site-title a {
-      color: #ffffff; }
+      color: #ffffff; 
+      text-decoration: none;
+    }
       .site-title a:hover, .site-title a:visited:hover {
         color: rgba(255, 255, 255, 0.8); }
   
@@ -319,7 +323,9 @@
               .footer-menu ul li a {
                 color: #fff;
                 border-bottom: 1px solid transparent;
-                padding-bottom: 5px; }
+                padding-bottom: 5px; 
+                text-decoration: none;
+              }
                 .footer-menu ul li a:hover {
                   border-color: #fff; }
                   .footer-menu ul li a:hover:after {

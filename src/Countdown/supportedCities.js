@@ -33,11 +33,11 @@ export var supportedCities = [
     },
     {
         timezone: 5,
-        name: "asia/baku",
-        city: "Baku",
-        country: "Azerbaijan",
-        drink: "Sherbet",
-        note: "A cold beverage from water or milk and lemon, sugar, saffron, mint, basil and fruits. "
+        name: "indian/maldives",
+        city: "Malé",
+        country: "Maldives",
+        drink: "The Maldivian Lady",
+        note: "A cocktail made from rum, apricot brandy, orange juice, pineapple juice, and splash of Grenadine syrup."
     },
     {
         timezone: 6,
@@ -170,20 +170,20 @@ export var supportedCities = [
     {
         timezone: -2,
         name: "atlantic/south_georgia",
-        city: "South Georgia", //mismatching city
+        city: "Fernando de Noronha", //mismatching city
         country: "Brazil",
         drink: "Caipirinha",
         note: "Is Brazil's national cocktail, made with cachaça (sugarcane hard liquor), sugar, and lime."
     },
-    {
-        timezone: -2,
-        name: "america/st_johns",
-        city: "St Johns",
-        country: "United States of America",
-        drink: "Painkiller",
-        note: "A rum cocktail made with  pineapple juice, cream of coconut and orange juice, with a generous amount of fresh nutmeg on top."
+    // {
+    //     timezone: -2,
+    //     name: "america/st_johns",
+    //     city: "St Johns",
+    //     country: "United States of America",
+    //     drink: "Painkiller",
+    //     note: "A rum cocktail made with  pineapple juice, cream of coconut and orange juice, with a generous amount of fresh nutmeg on top."
         
-    },
+    // },
     {
         timezone: -1,
         name: "atlantic/cape_verde",

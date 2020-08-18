@@ -30,3 +30,6 @@ jobs:
     - name: Docker Build
       run: |
         docker build ./ -t 510carlos/5pm-countdown:v0.1
+    - name: Docker push
+      run: |
+        docker push 510carlos/5pm-countdown:v0.1

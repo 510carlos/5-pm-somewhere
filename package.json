@@ -6,9 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.6.2",
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-font-loader": "^1.1.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "spacetime": "^6.6.0",
     "styled-components": "^5.1.1"
@@ -35,5 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000/"
 }
